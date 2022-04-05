@@ -1,0 +1,39 @@
+{% extends 'new/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="page-title" style="background-image:url({% static 'new/images/background/5.jpg' %})">
+    <div class="auto-container">
+        <h2>Track</h2>
+        <ul class="page-breadcrumb">
+            <li><a href="{% url 'home' %}">Track</a></li>
+            <li>Track</li>
+        </ul>
+    </div>
+</section>
+<br>
+
+<div class="container">
+    <h2 class="wow fadeInUp d-blue justify-content-center" style="align-items: center;text-align: left;" data-wow-delay="0.3s">Track your parcel with ease</h2>
+</div>
+    
+
+
+
+<br><br>
+
+
+<div  class="search-widget-area mb-50 wow fadeInUp container" data-wow-delay="0.2s" >      
+    <form class="form-group" method="get" action="{% url 'search' %}">
+        <fieldset>
+            <input type="search" class="form-control" name="q" value="{{ request.GET.q }}" id="search" style="background-color: white;color: black;font-size: larger;" placeholder="Enter Tracking No..." required>
+            <br>
+        <button type="submit" style="background-color: #1AA7EC;color: white;" class="btn btn-success form-control">Track</button>
+        </fieldset>
+        
+    </form>
+</div>
+        <br><br>
+        
+          <br>
+{% endblock %}

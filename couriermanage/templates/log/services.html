@@ -1,0 +1,264 @@
+{% extends 'log/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- ##### Welcome Area Start ##### -->
+    <div class="breadcumb-area clearfix auto-init">
+        
+        <!-- breadcumb content -->
+        <div class="breadcumb-content">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb" class="breadcumb--con text-center">
+                            <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">Services</h2>
+                            <ol class="breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Welcome Area End ##### -->
+    <br><br>
+
+    <div style="font-size: large;margin-left: 40px;margin-right: 40px;" class="search-widget-area mb-50 wow fadeInUp" data-wow-delay="0.2s" >      
+        <form  method="get" action="{% url 'search' %}">
+            <input type="search" name="q" value="{{ request.GET.q }}" id="search" style="background-color: rgb(75, 75, 185);color: white;border-color: red;font-size: larger;" placeholder="Track...">
+            <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- ##### Our Services Area Start ##### -->
+    <section class="our_services_area section-padding-100-0 relative map-before">
+        <div class="container">
+            
+            <div class="section-heading text-center">
+                
+                <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span class="">Our Services</span>
+                </div>
+                <h2 class="d-blue bold fadeInUp" data-wow-delay="0.3s">What we speciaized in</h2>
+                <p class=" fadeInUp" data-wow-delay="0.4s"></p>
+            </div>
+                
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/1.jpg' %}" alt="">
+                        </div>
+                        <h6>Supply Chain Management</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/2.jpg' %}" alt="">
+                        </div>
+                        <h6>Warehousing Management</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.4s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/3.jpg' %}" alt="">
+                        </div>
+                        <h6>AirLine Transportation</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.5s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/4.jpg' %}" alt="">
+                        </div>
+                        <h6>Ocean Freight Forwarding</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.6s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/5.jpg' %}" alt="">
+                        </div>
+                        <h6> Customs House Brokerage</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.7s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/6.jpg' %}" alt="">
+                        </div>
+                        <h6>Realway Transportation</h6>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-sec section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-sm-12">
+                    <div class="welcome-video-area header-video">
+                        <!-- Video Icon -->
+                        <!-- <div class="video-icon">
+                            <a href="https://www.youtube.com/watch?v=gbXEPHsTkgU" class="btn dream-btn video-btn" id="videobtn"><i class="fa fa-play"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="mt-50 text-center">
+                       
+                        <h2 class="w-text big-font mb-30 fadeInUp" data-wow-delay="0.2s">We open unlimited opportunities to develop Your business!</h2>
+                        <p class="g-text mb-0 fadeInUp" data-wow-delay="0.3s"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ##### Team Area Start ##### -->
+    
+    <!-- ##### Team Area End ##### -->
+
+<br><br>
+    <div class="text-center section-padding-0-0">
+        <div class="container">
+            <div class="call-us-sec con-info">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="text-left">
+                            <h3 class="g-text fadeInUp" data-wow-delay="0.3s">Get Your Quote or Call: +14058714233</h3>
+                            <h2 class="w-text mb-0">Are You Ready? Book Appointment!</h2>
+                            <a class="btn-paint mt-30 fadeInUp" data-wow-delay="0.6s" href="{% url 'contact' %}">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="con-img-wrapper">
+                            <img src="{% static 'co/img/core-img/about-4.png' %}" class="con-img mt-s" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-bg">
+        <!-- ##### Testimonial Area Start ##### -->
+        <section class="clients_testimonials_area bg-img section-padding-0-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading text-center">
+                            
+                            <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                                <span class="gradient-text blue">Our Testimonials</span>
+                            </div>
+                            <h2 class=" wow fadeInUp" data-wow-delay="0.3s">What Our Client Say</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">We can tell you how great Tranmix is, but we think it’s always better to let our happy clients do the talking – so here are a selection of comments and testimonials which we have gathered over the years, from a huge range of clients in many different industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cotainer-fluid">
+                <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-12 col-md-10 col-xs-10 offset-xs-1">
+                        <div class="client_slides owl-carousel">
+
+                            <!-- Single Testimonial -->
+                            <div class="single-testimonial text-center">
+                                <div class="icon_wrapper">
+                                    <i class="fa fa-quote-right"></i>
+                                </div>
+                                <!-- Testimonial Image -->
+                                <div class="testimonial_image">
+                                    <img src="{% static 'co/img/test-img/1.jpg' %}" alt="">
+                                </div>
+                                <!-- Testimonial Feedback Text -->
+                                <div class="testimonial-description">
+                                    <div class="testimonial_text">
+                                        <p>"Tranmix has been a trusted, reliable partner for Bailiwick since the first shipment they picked up. They give me peace of mind knowing that my US shipments will get to their destinations on time and in good condition. Using Tranmix allows me to focus on other aspects of the job rather than worrying about logistics issues."</p>
+                                    </div>
+
+                                    <!-- Admin Text -->
+                                    <div class="admin_text">
+                                        <h5>James Cole</h5>
+                                        <p>One of Our Clientss</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Testimonial -->
+                            <div class="single-testimonial text-center">
+                                <div class="icon_wrapper">
+                                    <i class="fa fa-quote-right"></i>
+                                </div>
+                                <!-- Testimonial Image -->
+                                <div class="testimonial_image">
+                                    <img src="{% static 'co/img/test-img/2.jpg' %}" alt="">
+                                </div>
+                                <!-- Testimonial Feedback Text  -->
+                                <div class="testimonial-description">
+                                    <div class="testimonial_text">
+                                        <p>“As always, SEKO once again came through for us when the shipment had to be there. I know I can always count on you and I can go home and let you handle it. That is priceless. Thanks again.”</p>
+                                    </div>
+
+                                    <!-- Admin Text -->
+                                    <div class="admin_text">
+                                        <h5>Andrea Smith</h5>
+                                        <p>One of Our Clientss</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Testimonial -->
+                            <div class="single-testimonial text-center">
+                                <div class="icon_wrapper">
+                                    <i class="fa fa-quote-right"></i>
+                                </div>
+                                <!-- Testimonial Image -->
+                                <div class="testimonial_image">
+                                    <img src="{% static 'co/img/test-img/3.jpg' %}" alt="">
+                                </div>
+                                <!-- Testimonial Feedback Text  -->
+                                <div class="testimonial-description">
+                                    <div class="testimonial_text">
+                                        <p>“My team and I appreciate the way that you are always on the ball and willing to go out of your way to help get us our material in time to prevent our lines from going down. Nice Job!”</p>
+                                    </div>
+                                    <!-- Admin Text -->
+                                    <div class="admin_text">
+                                        <h5>Chloe Burd</h5>
+                                        <p>One of Our Clientss</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ##### Testimonial Area End ##### -->
+        
+ {% endblock %}

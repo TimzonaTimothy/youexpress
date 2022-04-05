@@ -1,0 +1,101 @@
+{% extends 'new/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'new/images/background/5.jpg' %})">
+    	<div class="auto-container">
+        	<h2>Contact</h2>
+            <ul class="page-breadcrumb">
+            	<li><a href="{% url 'home' %}">home</a></li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+	<br><br>
+    {% include 'new/alerts.html' %}
+	<!--Cart Section-->
+    <section class="section-padding-100 contact_us_area" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                            <span class="">
+                                We’d love to hear from you.</span>
+                        </div>
+                        <h2 class="wow fadeInUp d-blue" data-wow-delay="0.3s">Contact With Us</h2>
+                        <!-- <p class="wow fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p> -->
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Contact Form -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="contact_form">
+                        <form method="post" >
+                            {% csrf_token %}
+                            <div class="row">
+                                
+
+                                <div style="margin-top: 20px;" class="col-12 col-md-6">
+                                    <div class="group wow fadeInUp" data-wow-delay="0.2s">
+                                        
+                                        <input class="form-control" type="text" name="firstname" required=required placeholder="First Name">
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        
+                                    </div>
+                                </div> <br>
+                                <div style="margin-top: 20px;" class="col-12 col-md-6">
+                                    <div class="group wow fadeInUp" data-wow-delay="0.3s">
+                                        
+                                        <input class="form-control" type="text" name="lastname"  required=required placeholder="Last Name">
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        
+                                    </div>
+                                </div> <br>
+                                <div style="margin-top: 20px;" class="col-12 col-md-6">
+                                    <div class="group wow fadeInUp" data-wow-delay="0.4s">
+                                        
+                                        <input class="form-control" type="email" name="email" required=required  placeholder="Email">
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        
+                                    </div>
+                                </div> <br>
+                                <div style="margin-top: 20px;" class="col-12 col-md-6">
+                                    <div class="group wow fadeInUp" data-wow-delay="0.4s">
+                                        
+                                        <input class="form-control" type="text" name="massage_subject"  placeholder="Subject">
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                       
+                                    </div>
+                                </div> 
+                                <div style="margin-top: 20px;" class="col-12">
+                                    <div class="group wow fadeInUp" data-wow-delay="0.5s">
+                                        
+                                        <textarea class="form-control" name="message"  required=required  placeholder="Message"></textarea>
+                                        
+                                        
+                                    </div>
+                                </div> 
+                                <div style="margin-top: 20px;float: left;" class="col-12 wow fadeInUp" data-wow-delay="0.6s">
+                                    <button style="background-color: #1AA7EC;color: white;" type="submit" class="btn btn-success form-control">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Cart Section-->
+    <br><br>
+{% endblock %}

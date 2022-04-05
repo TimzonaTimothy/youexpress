@@ -1,0 +1,87 @@
+{% extends 'new/base.html' %}
+{% load static %}
+{% block content %}
+
+<br><br>
+{% if page_obj %}
+<center>
+<section style=";align-items: center;" class="blog-area section-padding-100-0">
+      
+    <div class="container" style="align-items: center;justify-content: center;text-align: center;">
+        <div  class="row">{% for courier in page_obj %}
+            <!-- Single Blog Post -->
+            <div  class="col-12 col-sm-6">
+                <div class="single-blog-area wow fadeInUp" data-wow-delay="0.2s">
+                    <!-- Post Thumbnail -->
+                    <div class="blog_thumbnail">
+                        <img src="{% static 'co/img/blog-img/2.jpg' %}" alt="">
+                    </div>
+                    <!-- Post Content -->
+                    <div class="blog-content">
+                        
+                        <div class="post-meta">
+                            <h2>Package ID <a href="{% url 'detail' id=courier.id %}" class="post-author">{{ courier.tracking_id }}</a> </h2>
+                        </div>
+                        
+                        <p>Date {{ courier.list_date }}</p>
+                        <a href="{% url 'detail' id=courier.id %}" class="btn btn-success">Read Details</a>
+                    </div>
+                </div>
+            </div>
+
+    
+        </div>
+
+    </div>
+  </section>
+</center>
+{% endfor %}
+  
+  <div class="row">
+    <div class="col-md-12">
+      {% if page_obj.has_other_pages %}
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a href="?page={{page_obj.previous_page_number}}" class="page-link">&laquo;</a>
+        </li>
+        {% else %}
+          <li class="page_item disabled">
+            <a class="page-link">&laquo;</a>
+          </li>
+        {% endif %}
+        {% for i in page_obj.paginator.page_range %}
+          {% if page_obj.number == i %}
+            <li class="page-item active">
+              <a class="page-link">{{i}}</a>
+            </li>
+          {% else %}
+            <li class="page-item">
+              <a href="?page={{i}}" class="page-link">{{i}}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+        <li class="page-item">
+          <a href="?page={{page_obj.next_page_number}}" class="page-link">&raquo;</a>
+        </li>
+        {% else %}
+          <li class="page_item disabled">
+            <a class="page-link">&raquo;</a>
+          </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+    </div>
+  </div> <br><br><br>
+{% else %}
+<br><br>
+  <center>
+  <div class="container">
+    <h4 style="color: red;">Could'nt find any packages for you.</h3>
+        <p style="color: white;">Make sure you typed your tracking number correct</p>
+  </div>
+  </center>
+{% endif %}
+<br>
+{% endblock %}

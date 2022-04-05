@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+<meta charset="utf-8">
+<title>YouExpress - Logistics</title>
+<!-- Stylesheets -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<link href="{% static 'new/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'new/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'new/css/responsive.css' %}" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="{% static 'new/logo.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'new/logo.png' %}" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+<style>
+	body{
+		font-family: 'Roboto', sans-serif;
+	}
+</style>
+<body class="dark-layout">
+
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+	
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #242424;color: white;font-weight: normal;font-size: medium;font-family: Roboto;">
+		<div class="container">
+			<a class="navbar-brand" href="{% url 'home' %}"><img  src="{% static 'new/logo.png' %}" alt="" title="" width="129px" height="90px" ></a>
+		<button style="background-color: #242424;border-color: rgb(134, 133, 133);" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText">
+		  <ul class="navbar-nav mr-auto">
+			
+		  </ul>
+		  <div class="d-flex  mb-3 mb-lg-0">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item {% if '/' == request.path %} active current{% endif %}">
+				  <a class="nav-link" style="color: white;" href="{% url 'home' %}">Home </a>
+				</li>
+				<li class="nav-item {% if '/about/' == request.path %} active current{% endif %}">
+				  <a class="nav-link" style="color: white;" href="{% url 'about' %}">About</a>
+				</li>
+				<li class="nav-item {% if '/services/' == request.path %} active current{% endif %}">
+				  <a class="nav-link" style="color: white;" href="{% url 'services' %}">Services</a>
+				</li>
+				<li class="nav-item {% if '/track/' == request.path %} active current{% endif %}">
+					<a class="nav-link" style="color: white;" href="{% url 'track' %}">Track</a>
+				  </li>
+				  <li class="nav-item {% if '/contact/' == request.path %} active current{% endif %}">
+					<a class="nav-link" style="color: white;" href="{% url 'contact' %}">Contact</a>
+				  </li>
+				  
+				  <!-- <li class="nav-item">
+					<div class="outer-box clearfix">
+						<div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
+					</div>
+				  </li> -->
+			  </ul>
+		  </div>
+		</div>
+		</div>
+		
+	  </nav>
+
+	
+	
+    <!-- <header class="main-header header-style-two">
+        
+        
+        <div class="header-upper">
+            <div class="outer-container clearfix">
+		
+				<div class="logo-outer">
+					<div class="logo"><a href="{% url 'home' %}"><img  src="{% static 'new/images/logo.png' %}" alt="" title="" style="font-size: smaller;"></a></div>
+				</div>
+
+				<div class="nav-outer clearfix">
+				<div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+					<nav class="main-menu navbar-expand-md navbar-light">
+						<div class="navbar-header">
+					   
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="icon flaticon-menu-1"></span>
+							</button>
+						</div>
+						
+						<div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+							     <ul class="navigation clearfix">
+                                    <li class="{% if '/' == request.path %} current{% endif %}"><a href="{% url 'home' %}">Home</a>
+                                        
+                                    </li>
+									<li class="{% if '/about/' == request.path %} current{% endif %}"><a href="{% url 'about' %}">About us</a>
+                                        
+                                    </li>
+                                    <li class="{% if '/services/' == request.path %} current{% endif %}"><a href="{% url 'services' %}">Our Services</a>
+                                        
+                                    </li>
+                                   
+									
+                                    <li class="{% if '/track/' == request.path %} current{% endif %}"><a href="{% url 'track' %}">Track</a>
+                                        
+                                    </li>
+                                    
+                                    <li class="{% if '/contact/' == request.path %} current{% endif %}"><a href="{% url 'contact' %}">Contact Us</a></li>
+                                </ul>
+						</div>
+					</nav>
+		
+					
+				
+					<div class="outer-box clearfix">
+						<div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+
+
+
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="{% url 'home' %}"><img src="{% static 'new/images/logo.png' %}" alt="" title=""></a></div>
+                <ul class="navigation clearfix"></ul>
+				
+            </nav>
+        </div>
+
+    </header> -->
+    <!-- End Main Header -->
+
+    {% block content %} {% endblock %}
+    
+	
+	<!--Main Footer-->
+    <footer class="main-footer">
+		<div class="auto-container">
+        	<!--Widgets Section-->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!--big column-->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                <div class="footer-widget logo-widget">
+									<div class="logo">
+                                    	<a href="{% url 'home' %}"><img src="{% static 'new/logo.png' %}" width="200px" height="100px" alt="" /></a>
+                                    </div>
+                                    <div class="text">With our Experience of over 25+ Years in the Industry, the company is highly skilled and is equipped with the best of facilities to match all High Quality Moving Standards.</div>
+                                    <!-- <ul class="social-icons">
+                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                                    </ul> -->
+								</div>
+							</div>
+							
+							<!--Footer Column-->
+                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Navigate</h2>
+									<div class="widget-content">
+										<ul class="list">
+                                        	<li><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href="{% url 'about' %}">About</a></li>
+                                            <li><a href="{% url 'services' %}">Services</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        </ul>
+                                    </div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					
+					<!--big column-->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                <div class="footer-widget contact-widget">
+									<h2>Contact Details</h2>
+									<div class="widget-content">
+									
+										<ul> 
+											<li><span class="icon flaticon-phone-call"></span><a href="tel:1234567891">(1234) 567 8910</a></li>
+											<li><span class="icon flaticon-map"></span> 000, Mumbai, India</li>
+											<li><span class="icon flaticon-email"></span><a href="mailto:youremail@example.com"> youremail@example.com</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<!--Footer Column-->
+                            <!-- <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                <div class="footer-widget newsletter-widget">
+                                	<h2>Quick Inquiry</h2>
+									
+									<div class="newsletter-form">
+										<form method="post" action="contact-footer.php">
+											<div class="form-group">
+												<input type="text" name="name" value="" placeholder="Your Name" required>
+												<input type="email" name="email" value="" placeholder="Your Email" required>
+												<input type="text" name="message" value="" placeholder="Message" required>
+												<button type="submit" class="theme-btn btn-style-one"><span class="txt">Submit</span></button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div> -->
+						
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!--Footer Bottom-->
+            <div class="footer-bottom clearfix">
+                <div class="pull-left">
+                    <div class="copyright"><a href="#">© YouExpress <span class="year"></span> All Right Reserved.</a></div>
+                </div>
+                <!-- <div class="pull-right">
+                    <a href="#">Terms & Conditions |</a>
+                    <a href="#">Privacy Policy |</a>
+                    <a href="#">Disclaimer</a>
+                </div> -->
+            </div>
+			
+		</div>
+	</footer>
+	
+</div>  
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+<!--Search Popup-->
+<div id="search-popup" class="search-popup">
+	<div class="close-search theme-btn"><span class="flaticon-cancel"></span></div>
+	<div class="popup-inner">
+		<div class="overlay-layer"></div>
+    	<div class="search-form">
+        	<form  method="get" action="{% url 'search' %}">
+            	<div class="form-group">
+                	<fieldset>
+                        <input type="search" class="form-control" name="q" value="{{ request.GET.q }}" placeholder="Search Here" required >
+                        <input type="submit" value="Search Now!" class="theme-btn">
+                    </fieldset>
+                </div>
+            </form>
+            
+          
+        </div>
+        
+    </div>
+</div>
+<script>
+    const date = new Date();
+document.querySelector('.year').innerHTML = date.getFullYear();
+</script>
+<!--Scroll to top-->
+<script src="{% static 'new/js/jquery.js' %}"></script>
+<script src="{% static 'new/js/popper.min.js' %}"></script>
+<script src="{% static 'new/js/jquery-ui.js' %}"></script>
+<script src="{% static 'new/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'new/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'new/js/isotope.js' %}"></script>
+<script src="{% static 'new/js/owl.js' %}"></script>
+<script src="{% static 'new/js/wow.js' %}"></script>
+<script src="{% static 'new/js/isotope.js' %}"></script>
+<script src="{% static 'new/js/appear.js' %}"></script>
+<script src="{% static 'new/js/scrollbar.js' %}"></script>
+<script src="{% static 'new/js/script.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Tranmix - Multipurpose Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'co/img/core-img/favicon.ico' %}">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'co/css/style.css' %}">
+
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="{% static 'co/css/responsive.css' %}">
+
+</head>
+
+<body class="light-version">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="dream-load"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="banner">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="{% url 'home' %}"><span><img src="{% static 'co/img/core-img/logo.png' %}" alt="logo"></span> Tranmix</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="{% url 'home' %}" id="navbardrop" >Home</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">Services</a>
+                    </li>
+                    
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'main' %}">{{ user.username|title }}-Dashboard</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="lh-55px"><a href="{% url 'contact' %}" class="btn login-btn ml-50">Contact us</a></li>
+                    {% endif %}
+
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ##### Header Area End ##### -->
+
+
+{% block content %} {% endblock %}
+
+
+       <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img">
+
+        <div class="footer-content-area mt-0">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 col-lg-4 col-md-6">
+                        <div class="footer-copywrite-info">
+                            <!-- Copywrite -->
+                            <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
+                                <div class="footer-logo">
+                                    <a href="{% url 'home' %}"><img src="{% static 'co/img/core-img/logo.png' %}" alt="logo"> Tranmix </a>
+                                </div>
+                                <p>We Are The Most Popular Logistics & Transportation Company in The City</p>
+                            </div>
+                            <!-- Social Icon -->
+                            <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-6">
+                        <div class="contact_info_area d-sm-flex justify-content-between">
+                            <!-- Content Info -->
+                            <div class="contact_info mt-x text-center fadeInUp" data-wow-delay="0.3s">
+                                <!-- <h5>PRIVACY & TOS</h5>
+                                <a href=""><p>Advertiser Agreement</p></a>
+                                <a href=""><p>Acceptable Use Policy</p></a>
+                                <a href=""><p>Privacy Policy</p></a>
+                                <a href=""><p>Technology Privacy</p></a>
+                                <a href=""><p>Developer Agreement</p></a> -->
+                            </div>
+                        </div>
+                    </div>
+                      
+                    <div class="col-12 col-lg-2 col-md-6 ">
+                        <!-- Content Info -->
+                        <div class="contact_info_area d-sm-flex justify-content-between">
+                            <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.2s">
+                                <h5>NAVIGATE</h5>
+                                <a href="{% url 'home' %}"><p>Home</p></a>
+                                <a href="{% url 'about' %}"><p>About</p></a>
+                                <a href="{% url 'services' %}"><p>Services</p></a>
+                               
+                                <a href="{% url 'contact' %}"><p>Contact</p></a>
+                                <a href="{% url 'login' %}"><p>Login</p></a>
+                                <a href="{% url 'register' %}"><p>Register</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-12 col-lg-3 col-md-6 ">
+                        <div class="contact_info_area d-sm-flex justify-content-between">
+                            <!-- Content Info -->
+                            <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
+                                <h5>CONTACT US</h5>
+                                <p>Mailing Address:xx00 E. Union Ave</p>
+                                <p>Suite 1100. Denver, CO 80237</p>
+                                <p>+14058714233</p>
+                                <p>tranyhelp@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p> Copyright &copy;<span class="year"></span>Tranmix</p>
+                </div>
+            </div>
+                
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ########## All JS ########## -->
+    <!-- jQuery js -->
+    <script src="{% static 'co/js/jquery.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'co/js/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'co/js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'co/js/plugins.js' %}"></script>
+
+    <!-- script js -->
+    <script src="{% static 'co/js/script.js' %}"></script>
+    <script>
+        const date = new Date();
+document.querySelector('.year').innerHTML = date.getFullYear();
+
+setTimeout(function(){
+    $('#message').fadeOut('slow');
+}, 3000);
+    </script>
+
+</body>
+
+</html>

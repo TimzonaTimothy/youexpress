@@ -1,0 +1,165 @@
+{% extends 'new/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'new/images/background/5.jpg' %})">
+    	<div class="auto-container">
+        	<h2>FAQ's</h2>
+            <ul class="page-breadcrumb">
+            	<li><a href="{% url 'home' %}">home</a></li>
+                <li>FAQ's</li>
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+
+
+    <section class="testimonials-page-section">
+        
+        <!--begin container-->
+        <div class="auto-container">
+    <!-- Page Title -->
+            <div class="title-box">
+                <h2>Frequently <span class="color"> Ask </span> Questions</h2>
+                <div class="text">Look what our FAQ's</div>
+            </div>
+            
+            <!--begin row-->
+            <div class="row">
+               
+               <!--begin col-md-6-->
+                <div class="col-md-6 margin-top-10">
+
+                    <!--begin panel-group -->
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        
+                        <!--begin panel-default -->
+                        <div class="panel panel-default">
+                            
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                
+                                <h4 class="panel-title">
+                                    
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
+                                      <i class="icon icon-rocket panel-icon"></i>WHO HAS  ?
+                                    </a>
+                                    
+                                </h4>
+                                
+                            </div>
+                            
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
+                                
+                                <div class="panel-body">
+                                    <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account seds of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. </p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <!--end panel-default -->
+                        
+                        <!--begin panel-default -->
+                        <div class="panel panel-default">
+                            
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                
+                                <h4 class="panel-title">
+                                    
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      <i class="icon icon-prize-award panel-icon"></i> Can you work with me if I’m based in another country ?
+
+                                    </a>
+                                    
+                                </h4>
+                                
+                            </div>
+                            
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+                                
+                                <div class="panel-body">
+                                    <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account seds of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <!--end panel-default -->
+                        
+                        <!--begin panel-default -->
+                        <div class="panel panel-default">
+                            
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                
+                                <h4 class="panel-title">
+                                    
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      <i class="icon icon-present-gift panel-icon"></i> Can I see any demo, samples of your work ?
+                                    </a>
+                                    
+                                </h4>
+                                
+                            </div>
+                            
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
+                                
+                                <div class="panel-body">
+                                    <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account seds of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <!--end panel-default -->
+
+                        <!--begin panel-default -->
+                        <div class="panel panel-default">
+                            
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                
+                                <h4 class="panel-title">
+                                    
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                      <i class="icon icon-present-gift panel-icon"></i> Do we need to use your contractor ?
+                                    </a>
+                                    
+                                </h4>
+                                
+                            </div>
+                            
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour" aria-expanded="false">
+                                
+                                <div class="panel-body">
+                                    <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account seds of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <!--end panel-default -->
+                        
+                    </div>
+                    <!--end panel-group -->
+                    
+                </div>
+                <!--end col-sm-6-->
+                 <!--begin col-md-6-->
+                <div class="col-md-6 margin-top-10">
+
+                   <img src="{% static 'new/images/faq.jpg' %}" class="width-100 picture-padding-bottom" alt="image">
+
+                </div>
+                <!--end col-sm-6-->
+            </div>
+            <!--end row-->
+    
+        </div>
+        <!--end container-->
+    
+    </section>
+	
+{% endblock %}

@@ -1,0 +1,626 @@
+{% extends 'new/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	<div class="carousel-inner">
+	  <div class="carousel-item active">
+		<img class="d-block w-100" src="{% static 'new/images/main-slider/slider2.jpg' %}" alt="First slide">
+		<div class="carousel-caption">
+			<h2>From here You’re  <br> Almost There.</h2>
+			<div class="text">We constantly delivering the best is taken care of with the help of our Products Durability, Products Comfort and Products Attractiveness.</div>
+			<div class="btns-box">
+				<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
+			</div>
+		</div>
+	  </div>
+	  <div class="carousel-item">
+		<img class="d-block w-100" src="{% static 'new/images/main-slider/slider5.jpg' %}" alt="Second slide">
+	  </div>
+	  <div class="carousel-item">
+		<img class="d-block w-100" src="{% static 'new/images/main-slider/slider3.jpg' %}" alt="Third slide">
+	  </div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="sr-only">Next</span>
+	</a>
+  </div> -->
+    
+	<section class="main-slider style-two" >
+		<div class="slider-box">
+		
+			
+			<div class="banner-carousel owl-theme owl-carousel">
+			
+				
+				<div class="slide">
+                	<div class="image-layer" style="background-image:url({% static 'new/images/main-slider/li.jpg' %})"></div>
+					<div class="auto-container">
+						<div class="content">
+							<h2>Moving every goods <br> with care.</h2>
+							<div class="text">We constantly delivering the best is taken care of with the help of our Products Durability, Products Comfort and Products Attractiveness.</div>
+							<div class="btns-box">
+								<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="slide">
+                	<div class="image-layer" style="background-image:url({% static 'new/images/main-slider/slider3.jpg' %})"></div>
+					<div class="auto-container">
+						<div class="content">
+							<h2>From here You’re  <br> Almost There.</h2>
+							<div class="text">We constantly delivering the best is taken care of with the help of our Products Durability, Products Comfort and Products Attractiveness.</div>
+							<div class="btns-box">
+								<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="slide">
+                	<div class="image-layer" style="background-image:url({% static 'new/images/main-slider/slider2.jpg' %})"></div>
+					<div class="auto-container">
+						<div class="content">
+							<h2>We Preferred Safety, <br> Quality, Professionalism</h2>
+							<div class="text">We constantly delivering the best is taken care of with the help of our Products Durability, Products Comfort and Products Attractiveness.</div>
+							<div class="btns-box">
+								<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slide">
+                	<div class="image-layer" style="background-image:url({% static 'new/images/main-slider/slider1.jpg' %})"></div>
+					<div class="auto-container">
+						<div class="content">
+							<h2>Moving every customer <br> with care.</h2>
+							<div class="text">We constantly delivering the best is taken care of with the help of our Products Durability, Products Comfort and Products Attractiveness.</div>
+							<div class="btns-box">
+								<a href="{% url 'about' %}" class="theme-btn btn-style-one"><span class="txt">Know more</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		
+			
+		</div>
+	</section>
+	<!-- End Banner Section -->
+	
+	<!-- <br><div  class="search-widget-area mb-50 wow fadeInUp container" data-wow-delay="0.2s" >      
+		<form class="form-group" method="get" action="{% url 'search' %}">
+			<fieldset>
+				<input type="search" class="form-control" name="q" value="{{ request.GET.q }}" id="search" style="background-color: white;color: black;border-color;font-size: larger;" placeholder="Enter Tracking No..." required>
+				<br>
+			<button type="submit" style="background-color: #1AA7EC;color: white;font-family: Roboto;" class="btn btn-success">Track</button>
+			</fieldset>
+			
+		</form>
+	</div> -->
+	<br>
+	<section>
+
+
+		<div class="">
+			<div style="padding: 30px 10px 0px 10px;margin: 0px 25px 25px 0px;text-align: left;position: relative;font-family: Roboto;">
+				<h2 style="font-size: large;font-weight: bold;">Global Package Tracking</h2>
+			<p>Track packages from China, US Post, Canada Post, <br> Royal Mail, Deutsche Post, Vova, Aliexpress, UPS, Shein, FedEx, Pitney Bowes, eBay, Amazon
+				App store badge Google play badge
+				Hero ios android
+				</p>
+			</div>
+			
+			<form  action="{% url 'search' %}" class="search container" method="GET">
+			<div class="input-group w-100">
+				<input type="text" class="form-control" style="width:80%;" name="q" value="{{ request.GET.q }}" placeholder="Enter tracking number" required>
+				
+				<div class="input-group-append">
+				  <button class="btn btn-primary" type="submit">
+					<i class="fa fa-search"></i>
+				  </button>
+				</div>
+			</div>
+		</form>
+		</div>
+	</section>
+	
+	
+	<!-- about Section -->
+	<section class="interior-section">
+		<div class="auto-container">
+			<div class="inner-container">
+				<div class="row clearfix">
+					
+					<!-- Image Column -->
+					<div class="image-column col-lg-4 col-md-12 col-sm-12">
+						<div class="inner-column" height="100%">
+							<div class="image">
+								<img src="{% static 'new/warehouse.png' %}" alt="" />
+							</div>
+						</div>
+					</div>
+					
+					<!-- Content Column -->
+					<div class="content-column col-lg-8 col-md-12 col-sm-12">
+						<div class="inner-column">
+							<h2 style="text-align: left;font-family: Roboto;">Why Choose Us for Logistics & Transportation</h2>
+							<div style="text-align: left;font-family: Roboto;" class="text">Mylogistics is a Leading Provider of Quality Packers And Movers in world. With our Experience of over 25+ Years in the Industry, the company is highly skilled and is equipped with the best of facilities to match all High Quality Moving Standards.<br>
+							We constantly delivering the best is taken care of with the help of our Products Durability, Products Comfort and Products Attractiveness.We offer a wide range of Moving And Packing, logistics, transportation Upholestery Services in all over the world.</div>
+							<div class="row clearfix">
+							
+
+
+                                <!-- about Block -->
+								<div class="interior-block col-lg-4 col-md-4 col-sm-12">
+									<div class="block-inner">
+										<div class="icon-box">
+											<span class="icon flaticon-answer"></span>
+										</div>
+										<h3>Professional Team</h3>
+									</div>
+								</div>
+
+								<!-- about Block -->
+								<div class="interior-block col-lg-4 col-md-4 col-sm-12">
+									<div class="block-inner">
+										<div class="icon-box">
+											<span class="icon flaticon-award-1"></span>
+										</div>
+										<h3>Assure Quality</h3>
+									</div>
+								</div>
+								
+								<!-- about Block -->
+								<div class="interior-block col-lg-4 col-md-4 col-sm-12">
+									<div class="block-inner">
+										<div class="icon-box">
+											<span class="icon flaticon-call"></span>
+										</div>
+										<h3>24/7 Support</h3>
+									</div>
+								</div>
+								
+							</div>
+							
+							<!-- <div class="bold-text">Get in touch with us to design your dream home</div> -->
+							<!-- <div class="column-text">Talk to our design expert and get your designs</div> -->
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Interior Section -->
+
+
+	<!-- Services Section Three -->
+	<section class="services-section-three" >
+		<div class="auto-container">
+			
+			<!-- Sec Title -->
+			<div class="sec-title light centered">
+				<h2 style="color: black;">Our Excellent <span class="color">Services</span></h2>
+				
+			</div>
+			
+			<div class="row clearfix" >
+				
+				<!-- Service Block -->
+				<div class="service-block-three col-lg-3 col-md-6 col-sm-12" >
+					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-color: black;">
+						<div class="image">
+							<a ><img src="{% static 'new/images/resource/ser1.jpg' %}" alt="" /></a>
+						</div>
+						<div class="lower-content"  style="background-color: black;">
+							<h3 style="text-align: left;font: Roboto;"><a >Machinery Transport</a></h3>
+							<div style="text-align: left;font: Roboto;color: white;" class="text">YouExpress has their very own transport fleet with which we can transport your machinery to any destination.</div>
+							<!-- <a href="services-dark.html" class="read-more">Read more</a> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block-three col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp" data-wow-delay="250ms" data-wow-duration="1500ms" style="background-color: black;">
+						<div class="image">
+							<a ><img src="{% static 'new/images/resource/ser2.jpg' %}" alt="" /></a>
+						</div>
+						<div class="lower-content"  style="background-color: black;">
+							<h3 style="text-align: left;font: Roboto;"><a >Warehousing Services</a></h3>
+							<div style="text-align: left;font: Roboto;color: white;" class="text">We offer complete warehouse services to take care of all your needs. We receive, store, pack, track and ship your products.</div>
+							<!-- <a href="services-dark.html" class="read-more">Read more</a> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block-three col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+						<div class="image">
+							<a ><img src="{% static 'new/images/resource/ser3.jpg' %}" alt="" /></a>
+						</div>
+						<div class="lower-content"  style="background-color: black;">
+							<h3 style="text-align: left;font: Roboto;"><a >Supply Chain</a></h3>
+							<div style="text-align: left;font: Roboto;color: white;" class="text">We optimize product's creation from raw material sourcing to production, logistics and delivery to the final customer.</div>
+							<!-- <a href="services-dark.html" class="read-more">Read more</a> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block-three col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp" data-wow-delay="750ms" data-wow-duration="1500ms" >
+						<div class="image">
+							<a ><img src="{% static 'new/images/resource/about.jpg' %}" alt="" /></a>
+						</div>
+						<div class="lower-content"  style="background-color: black;">
+							<h3 style="text-align: left;font: Roboto;"><a >Cargo Services</a></h3>
+							<div style="text-align: left;font: Roboto;color: white;" class="text">we offer a comprehensive logistics service for transporting all types of merchandise to any point in the world.</div>
+							<!-- <a href="services-dark.html" class="read-more">Read more</a> -->
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			<!-- Button Box -->
+			<div class="btn-box text-center">
+				<a href="{% url 'services' %}" style="background-color: #1AA7EC;color: white;font-family: Roboto;" class="theme-btn btn-style-three"><span class="txt">View all Services</span></a>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Services Section -->
+	
+
+	<!-- Featured Process Section -->
+	<section class="featured-section" style="background-image: url({% static 'new/images/background/2.jpg' %})">
+		<div class="auto-container">
+			<!-- Title Box -->
+			<div class="title-box">
+				
+			</div>
+			
+			<div class="row clearfix">
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-discussion-1"></span>
+							</div>
+							<div class="feature-number" style="color: white;">01</div>
+						</div>
+						<div class="lower-content">
+							<h3 style="color: white;"><a >Materials handling</a></h3>
+							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="250ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-apartment-1"></span>
+							</div>
+							<div class="feature-number" style="color: white;">02</div>
+						</div>
+						<div class="lower-content">
+							<h3 style="color: white;"><a >Packaging & unitisation</a></h3>
+							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="500ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-sketch"></span>
+							</div>
+							<div class="feature-number" style="color: white;">03</div>
+						</div>
+						<div class="lower-content">
+							<h3 style="color: white;"><a >Inventory</a></h3>
+							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
+						</div>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="750ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-delivery-truck"></span>
+							</div>
+							<div class="feature-number" style="color: white;">04</div>
+						</div>
+						<div class="lower-content">
+							<h3 style="color: white;"><a >Transport</a></h3>
+							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Featured Section -->
+	<!-- <section class="hos-features section-padding-100-70">
+
+        <div class="section-heading text-center">
+            
+            <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                <span>Our Transport Ways</span>
+            </div>
+			<h2>Transportation<span class="color">Options</span></h2>
+            
+            <p class="wow fadeInUp" data-wow-delay="0.4s"></p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                   
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i3.png' %}" alt="">
+                        </div>
+                      
+                        <div class="service_img">
+                            <img src="{% static 'new/images/gallery/10.jpg' %}"" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Truck Transportation</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i1.png' %}" alt="">
+                        </div>
+                        
+                        <div class="service_img">
+                            <img src="{% static 'co/img/core-img/ser2.jpg' %}" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Air Transportation</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                   
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i4.png' %}" alt="">
+                        </div>
+                       
+                        <div class="service_img">
+                            <img src="{% static 'co/img/core-img/ser3.jpg' %}" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Railway Transportation</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i2.png' %}" alt="">
+                        </div>
+                        
+                        <div class="service_img">
+                            <img src="{% static 'co/img/core-img/ser4.jpg' %}" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Ocean Transportation</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section> -->
+
+	<!-- Project Section Two -->
+	<!-- <section class="project-section-two">
+		<div class="auto-container">
+		
+			<div class="sec-title light centered">
+				<h2>Our Latest <span class="color">Projects</span></h2>
+				<div class="text">Check out our latest projects before we go ahead.</div>
+			</div>
+		</div>
+		
+		<div class="outer-container">
+			
+			<div class="masonry-items-container row clearfix">
+				
+				
+				<div class="gallery-item  masonry-item col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="{% static 'new/images/gallery/8.jpg' %}" alt="">
+							
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<h3><a href="projects-fullwidth.html">Warehouse</a></h3>
+										<a href="{% static 'new/images/gallery/8.jpg' %}" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+										<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+									</div>
+								</div>
+							</div>
+						</figure>
+					</div>
+				</div>
+				
+		
+				<div class="gallery-item  masonry-item col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="{% static 'new/images/gallery/9.jpg' %}" alt="">
+						
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<h3><a href="projects-fullwidth.html">Cargo</a></h3>
+										<a href="{% static 'new/images/gallery/9.jpg' %}" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+										<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+									</div>
+								</div>
+							</div>
+						</figure>
+					</div>
+				</div>
+				
+	
+				<div class="gallery-item  masonry-item col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="{% static 'new/images/gallery/11.jpg' %}" alt="">
+				
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<h3><a href="projects-fullwidth.html">Logistics</a></h3>
+										<a href="{% static 'new/images/gallery/11.jpg' %}" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+										<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+									</div>
+								</div>
+							</div>
+						</figure>
+					</div>
+				</div>
+				
+
+				<div class="gallery-item  masonry-item col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="{% static 'new/images/gallery/10.jpg' %}" alt="">
+							
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<h3><a href="projects-fullwidth.html">Transportation</a></h3>
+										<a href="{% static 'new/images/gallery/10.jpg' %}" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+										<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+									</div>
+								</div>
+							</div>
+						</figure>
+					</div>
+				</div>
+				
+				
+				<div class="gallery-item  masonry-item col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="{% static 'new/images/gallery/12.jpg' %}" alt="">
+						
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<h3><a href="projects-fullwidth.html">Packaging</a></h3>
+										<a href="{% static 'new/images/gallery/12.jpg' %}" data-fancybox="gallery-2" data-caption="" class="link"><span class="icon flaticon-magnifying-glass-1"></span></a>
+										<a href="projects-fullwidth.html" class="link"><span class="icon flaticon-unlink"></span></a>
+									</div>
+								</div>
+							</div>
+						</figure>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</section> -->
+	<!-- End Project Section Two -->
+	
+	
+	
+	<!-- Counter Section -->
+	<!-- <section class="counter-section" >
+		<div class="auto-container">
+		
+		
+			<div class="fact-counter">
+				<div class="row clearfix" >
+
+			
+					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+						<div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="content">
+								<div class="count-outer count-box">
+									<span class="count-text" data-speed="2500" data-stop="25">0</span> Years
+								</div>
+								<h4 class="counter-title">Material Warranty</h4>
+							</div>
+						</div>
+					</div>
+
+				
+					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+						<div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+							<div class="content">
+								<div class="count-outer count-box alternate">
+									<span class="count-text" data-speed="3000" data-stop="2500">0</span>+
+								</div>
+								<h4 class="counter-title">Order Completed</h4>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+						<div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+							<div class="content">
+								<div class="count-outer count-box">
+									<span class="count-text" data-speed="3000" data-stop="300">0</span>+
+								</div>
+								<h4 class="counter-title">Team Member's</h4>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+						<div class="inner wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+							<div class="content">
+								<div class="count-outer count-box">
+									<span class="count-text" data-speed="2500" data-stop="20">0</span> Days
+								</div>
+								<h4 class="counter-title">Delivery</h4>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		</div>
+	</section> -->
+	<!-- End Counter Section -->
+	
+	
+	
+	
+	
+{% endblock %}

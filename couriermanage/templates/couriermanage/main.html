@@ -1,0 +1,107 @@
+{% extends 'log/base.html' %}
+{% include "couriermanage/base.html" %}
+{% load static %}
+{% block content %}
+<br><br><br><br><br>
+<style type="text/css">
+
+</style>
+
+{% include 'log/alerts.html' %}
+<br>
+
+                    <div style="font-size: large;margin-left: 40px;margin-right: 40px;" class="search-widget-area mb-50 wow fadeInUp" data-wow-delay="0.2s" >      
+                        <form  method="get">
+                            <input type="search" name="q" value="{{ request.GET.q }}" id="search" style="background-color: rgb(75, 75, 185);color: white;border-color: red;font-size: larger;" placeholder="Track...">
+                            <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                 
+<div style="align-items: center;text-align: center;">                    
+  <h1 style="padding-left: 20px;color: red;">Welcome {{ user.username|title }}</h1><br>
+
+</div>
+  {% if page_obj %}
+  
+ 
+
+    <section style="text-align: center;align-items: center;" class="blog-area section-padding-100-0">
+      
+      <div class="container">
+          <div  class="row">{% for courier in page_obj %}
+              <!-- Single Blog Post -->
+              <div  class="col-12 col-sm-6">
+                  <div class="single-blog-area wow fadeInUp" data-wow-delay="0.2s">
+                      <!-- Post Thumbnail -->
+                      <div class="blog_thumbnail">
+                          <img src="{% static 'co/img/blog-img/2.jpg' %}" alt="">
+                      </div>
+                      <!-- Post Content -->
+                      <div class="blog-content">
+                          
+                          <div class="post-meta">
+                          <a class="post-author" href="index-single-blog.html" class="post-title">
+                              <h4>Courier: {{ courier.name }}</h4>
+                          </a>
+                          <h3 class="posts-comments" style="font-weight: inherit;"><span style="font-weight: lighter;">Product: </span> {{ courier.service }}</h3>
+                        </div>
+                          <div class="post-meta">
+                              <h5>Package ID: <a href="#" class="post-author">{{ courier.tracking_id }}</a> <h6 >{{ courier.list_date }}</h6> <a href="#" class="post-comments"></a></h5>
+                          </div>
+                          <a href="{% url 'detail' id=courier.id %}" class="btn btn-paint mt-15">Read Details</a>
+                      </div>
+                  </div>
+              </div>
+{% endfor %}
+      
+          </div>
+
+      </div>
+    </section>
+
+    <div class="row">
+      <div class="col-md-12">
+        {% if page_obj.has_other_pages %}
+        <ul class="pagination">
+          {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a href="?page={{page_obj.previous_page_number}}" class="page-link">&laquo;</a>
+          </li>
+          {% else %}
+            <li class="page_item disabled">
+              <a class="page-link">&laquo;</a>
+            </li>
+          {% endif %}
+          {% for i in page_obj.paginator.page_range %}
+            {% if page_obj.number == i %}
+              <li class="page-item active">
+                <a class="page-link">{{i}}</a>
+              </li>
+            {% else %}
+              <li class="page-item">
+                <a href="?page={{i}}" class="page-link">{{i}}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+          {% if page_obj.has_next %}
+          <li class="page-item">
+            <a href="?page={{page_obj.next_page_number}}" class="page-link">&raquo;</a>
+          </li>
+          {% else %}
+            <li class="page_item disabled">
+              <a class="page-link">&raquo;</a>
+            </li>
+          {% endif %}
+        </ul>
+        {% endif %}
+      </div>
+    </div> <br><br><br>
+  {% else %}
+    <center>
+    <div style="margin-top: 170px">
+      <h4>Could'nt find any packages for you.<br></h3>
+    </div>
+    </center>
+  {% endif %}
+  <br>
+{% endblock content %}

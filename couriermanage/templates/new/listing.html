@@ -1,0 +1,82 @@
+{% extends 'new/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section style="background-color: whitesmoke;" class="section-padding-100 contact_us_area mt-5 pt-3" id="contact">
+    <div  class="container">
+        
+
+        <!-- Contact Form -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="contact_form">
+                    
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="success_fail_info"></div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                
+                                    
+                                <h3 style="color: black;"><label>Sender Data</label></h3><hr>
+                                
+                                
+                                <p><span style="font-weight: bold;">Name:</span> {{ listing.sender_name|title }}</p>
+                                <p><span style="font-weight: bold;">Phone Number:</span> {{ listing.sender_phone }}</p>
+                                <p><span style="font-weight: bold;">Email:</span> {{ listing.sender_email }}</p>
+                                <p><span style="font-weight: bold;">Date recieved:</span> {{ listing.list_date }}</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                
+                                <h3 style="color: black;"><label> Recipient Information</label></h3><hr>
+                                <p><span style="font-weight: bold;">Receiver Name:</span> {{ listing.reciever_name|title }}</p>
+                                <p><span style="font-weight: bold;">Phone Number</span> {{ listing.reciever_phone }}</p>
+                                <p><span style="font-weight: bold;">Address:</span> {{ listing.reciever_address }}</p>
+                                <p><span style="font-weight: bold;">Email:</span> {{ listing.reciever_email }}</p>
+                            </div>
+                           
+                            <div style="" class="col-12">
+                               
+                                <h3 style="color: black;"><label> Shipping Information</label></h3><hr>
+                                <p><span style="font-weight: bold;">Agent Name:</span> {{ listing.agent }}</p>
+                                <p><span style="font-weight: bold;">Product:</span> {{ listing.product_name }}</p>
+                                <p><span style="font-weight: bold;">Courier:</span> {{ listing.courier }}efgbf</p>
+                                <p><span style="font-weight: bold;">Mode:</span> {{ listing.mode }}</p>
+                                <p><span style="font-weight: bold;">Quantity:</span> {{ listing.quantity }}</p>
+                                <p><span style="font-weight: bold;">Carrier:</span> {{ listing.carrier }}</p>
+                                <p><span style="font-weight: bold;">Carrier Reference No:</span> {{ listing.carrier_reference_no }}</p>
+                                <p><span style="font-weight: bold;">Payment Mode:</span> {{ listing.payment_mode }}</p>
+                                <p><span style="font-weight: bold;">Weight:</span> {{ listing.weight }}kg</p>
+                                <p><span style="font-weight: bold;">Departure Time:</span> {{ listing.departure_time }}</p>
+                                <p><span style="font-weight: bold;">Origin:</span> {{ listing.origin }}</p>
+                                <p><span style="font-weight: bold;">Destination:</span> {{ listing.destination }}</p>
+                                {% if listing.status  == 'Accepted' %}
+                                <p><span style="font-weight: bold;">Status:</span> Approved</p>
+                                {% elif listing.status  == 'Completed' %}
+                                <p><span style="font-weight: bold;">Status:</span> Delivered</p>
+                                {% elif listing.status  == 'Cancelled' %}
+                                <p><span style="font-weight: bold;">Status:</span>Cancelled</p>
+                                {% else %}
+                                <p><span style="font-weight: bold;">Status:</span>Pending</p>
+                                {% endif %}
+                                <p><span style="font-weight: bold;">Expected Delivery Date:</span> {{ listing.expected_delivery_date }}</p>
+                                <p><span style="font-weight: bold;">Comments:</span> </p>
+                                <p>{{ listing.comments }}</p>
+                               
+                                <br>
+                                <img width="200px" height="150px" src="{% static 'co/img/barcode.png' %}" alt="">
+                             <p>Tracking No. {{ listing.tracking_id }}</p>
+                            </div>
+                             
+                        </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,514 @@
+{% extends 'log/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- ##### Welcome Area Start ##### -->
+    <section class="hero-section banner1-bg relative section-padding" id="home">
+
+        <div class="hero-section-content">
+            
+            <div class="container h-100">
+                <div class="row h-100 mb-50 align-items-center">
+
+                    <!-- Welcome Content -->
+                    <div class="col-12 col-lg-6 col-md-12">
+                        <div class="welcome-content">
+                            <div class="promo-section">
+                                <h3 class="special-head">Logistics & Transportation Company</h3>
+                            </div>
+                            <h1 class="w-text bolder fadeInUp" data-wow-delay="0.2s">We Are The Most Popular Logistics & Transportation Company in The City</h1>
+                            <p class="g-text fadeInUp" data-wow-delay="0.3s">We plan, implement, and control the movement and storage of goods, services, or information within a supply chain and between the points of origin and consumption.</p>
+                            <div class="more-btn-group fadeInUp" data-wow-delay="0.4s">
+<!--                                 <a href="{% url 'contact' %}" class="btn-paint mr-3">contact us</a> -->
+                                <a href="{% url 'services' %}" class="btn-paint"> Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Welcome Area End ##### -->
+    
+
+
+      <!-- <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'co/img/bg-img/banner1-bg.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="special-head">Logistics & Transportation Company</h3>
+                <h1 class="w-text bolder fadeInUp" data-wow-delay="0.2s">We Are The Most Popular Logistics & Transportation Company in The City</h1>
+                <p class="g-text fadeInUp" data-wow-delay="0.3s">We plan, implement, and control the movement and storage of goods, services, or information within a supply chain and between the points of origin and consumption.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'co/img/bg-img/video-sec-bg.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="special-head">Logistics & Transportation Company</h3>
+                <h1 class="w-text bolder fadeInUp" data-wow-delay="0.2s">We Are The Most Popular Logistics & Transportation Company in The City</h1>
+                <p class="g-text fadeInUp" data-wow-delay="0.3s">We plan, implement, and control the movement and storage of goods, services, or information within a supply chain and between the points of origin and consumption.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'co/img/bg-img/banner3-bg.jpg' %}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h3 class="special-head">Logistics & Transportation Company</h3>
+                <h1 class="w-text bolder fadeInUp" data-wow-delay="0.2s">We Are The Most Popular Logistics & Transportation Company in The City</h1>
+                <p class="g-text fadeInUp" data-wow-delay="0.3s">We plan, implement, and control the movement and storage of goods, services, or information within a supply chain and between the points of origin and consumption.</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div> -->
+<br><br>
+
+                    <div style="font-size: large;margin-left: 40px;margin-right: 40px;" class="search-widget-area mb-50 wow fadeInUp" data-wow-delay="0.2s" >      
+                        <form  method="get" action="{% url 'search' %}">
+                            <input type="search" name="q" value="{{ request.GET.q }}" id="search" style="background-color: rgb(75, 75, 185);color: white;border-color: red;font-size: larger;" placeholder="Track...">
+                            <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    
+
+
+    <div class="clearfix"></div>
+
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="about-us-area section-padding-100-70">
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 offset-lg-0 col-md-12">
+                    <div class="fadeInUp">
+                        <img src="{% static 'co/img/core-img/img-1.jpg' %}" class="mb-15" alt="">
+                        <img src="{% static 'co/img/core-img/img-2.jpg' %}" class="mb-15 ml-30" alt="">
+                        <img src="{% static 'co/img/core-img/img-3.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 offset-lg-0">
+                    <div class="who-we-contant mt-s">
+                        <div class="more-dots text-left fadeInUp" data-wow-delay="0.2s">
+                            <span class="">Logistics & Transportation Company</span>
+                        </div>
+                        <h4 class="bold fadeInUp" data-wow-delay="0.3s">WELCOME TO TRANY LOGISTICS!, We are the most popular Logistics and Transportation company.</h4>
+                        <p class="fadeInUp" data-wow-delay="0.4s">Our team of experienced supply chain professionals leverage on our unparalleled distribution network with you from start to finish, designing and implementing your unique supply chain model.</p>
+                        <div class="row">
+                            <div class="col-sm-12 mt-30">
+                                <div class="services-block-four">
+                                    <div class="inner-box">
+                                        <div class="icon-img-box hot-box">
+                                            <img src="{% static 'co/img/icons/i1.png' %}" alt="">
+                                        </div>
+                                        <h3><a href="#">Airline transportation </a></h3>
+                                        <div class="text">Air transport is one of the fastest modes of public transport which connects international boundaries.</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <div class="services-block-four">
+                                    <div class="inner-box">
+                                        <div class="icon-img-box hot-box">
+                                            <img src="{% static 'co/img/icons/i2.png' %}" alt="">
+                                        </div>
+                                        <h3><a href="#">Ship & Ocean transportation</a></h3>
+                                        <div class="text">The main transport mode for global trade is ocean shipping: around 90% of traded goods are carried over the waves</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <div class="services-block-four">
+                                    <div class="inner-box">
+                                        <div class="icon-img-box hot-box">
+                                            <img src="{% static 'co/img/icons/i3.png' %}" alt="">
+                                        </div>
+                                        <h3><a href="#">Trucking & Road transportation</a></h3>
+                                        <div class="text">Road Freight is the physical process of transporting cargo by road using motor vehicles. In this case.</div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- ##### About Us Area End ##### -->
+
+    <section class="how section-padding-0-70 relative map-before">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span>Awesome Features</span>
+                </div>
+                <h2 class="wow fadeInUp d-blue bold" data-wow-delay="0.3s">Our core Features</h2>
+                <p class="wow fadeInUp" data-wow-delay="0.4s"></p>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content box-shadow text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                        <div class="how_icon">
+                            <img src="{% static 'co/img/icons/icon1.png' %}" class="colored-icon" alt="">
+                        </div>
+                        <h6>24/7 Hours Support</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content box-shadow text-center wow wow fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="how_icon">
+                            <img src="{% static 'co/img/icons/icon2.png' %}" class="colored-icon" alt="">
+                        </div>
+                        <h6>Flexible Prices</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content box-shadow text-center wow fadeInUp">
+                        <!-- Icon -->
+                        <div class="how_icon">
+                            <img src="{% static 'co/img/icons/icon3.png' %}" class="colored-icon" alt="">
+                        </div>
+                        <h6>Latest Equipment</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Content -->
+                    <div class="service_single_content box-shadow text-center wow fadeInUp">
+                        <!-- Icon -->
+                        <div class="how_icon">
+                            <img src="{% static 'co/img/icons/icon4.png' %}" class="colored-icon" alt="">
+                        </div>
+                        <h6>Ontime at Services</h6>
+                        <p></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section class="video-sec section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-sm-12">
+                    <div class="welcome-video-area header-video">
+                        <!-- Video Icon -->
+                        <!-- <div class="video-icon">
+                            <a href="https://www.youtube.com/watch?v=gbXEPHsTkgU" class="btn dream-btn video-btn" id="videobtn"><i class="fa fa-play"></i></a>
+                        </div> -->
+                    </div>
+                    <div class="mt-50 text-center">
+                       
+                        <h2 class="w-text big-font mb-30 fadeInUp" data-wow-delay="0.2s">We open unlimited opportunities to develop Your business!</h2>
+                        <p class="g-text mb-0 fadeInUp" data-wow-delay="0.3s"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hos-features section-padding-100-70">
+
+        <div class="section-heading text-center">
+            
+            <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                <span>Our Transport Ways</span>
+            </div>
+            <h2 class="wow fadeInUp bold" data-wow-delay="0.3s">Transportation Options</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.4s"></p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <!-- Content -->
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i3.png' %}" alt="">
+                        </div>
+                        <!-- Icon -->
+                        <div class="service_img">
+                            <img src="{% static 'co/img/core-img/ser3.jpg' %}" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Truck Transportation</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <!-- Content -->
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i1.png' %}" alt="">
+                        </div>
+                        <!-- Icon -->
+                        <div class="service_img">
+                            <img src="{% static 'co/img/core-img/ser2.jpg' %}" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Air Transportation</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <!-- Content -->
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i4.png' %}" alt="">
+                        </div>
+                        <!-- Icon -->
+                        <div class="service_img">
+                            <img src="{% static 'co/img/core-img/ser3.jpg' %}" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Railway Transportation</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <!-- Content -->
+                    <div class="feature_single_content text-center fadeInUp" data-wow-delay="0.5s">
+                        <div class="icon_wrapper">
+                            <img src="{% static 'co/img/icons/i2.png' %}" alt="">
+                        </div>
+                        <!-- Icon -->
+                        <div class="service_img">
+                            <img src="{% static 'co/img/core-img/ser4.jpg' %}" class="" alt="">
+                        </div>
+                        <h6 class="feature-info">Ocean Transportation</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <div class="text-center section-padding-0-0">
+        <img src="{% static 'co/img/bg-img/b-img.jpg' %}" alt="">
+        <div class="container">
+            <div class="call-us-sec con-info">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="text-left">
+                            <h3 class="g-text fadeInUp" data-wow-delay="0.3s">Get Your Quote or Call: +14058714233</h3>
+                            <h2 class="w-text mb-0">Are You Ready? Book Appointment!</h2>
+                            <a class="btn-paint mt-30 fadeInUp" data-wow-delay="0.6s" href="{% url 'contact' %}">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="con-img-wrapper">
+                            <img src="{% static 'co/img/core-img/about-4.png' %}" class="con-img mt-s" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="about-us-area section-padding-100">
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 offset-lg-0 col-md-12">
+                    <div class="fadeInUp" data-wow-delay="0.7s">
+                        <img src="{% static 'co/img/core-img/about1.png' %}" alt="">
+                    </div>
+                </div>
+                
+                <div class="col-12 col-lg-6 offset-lg-0">
+                    <div class="who-we-contant mt-s">
+                        <div class="more-dots text-left fadeInUp" data-wow-delay="0.2s">
+                            <span class="">Logistics & Transportation Company</span>
+                        </div>
+                        <h4 class="bold fadeInUp" data-wow-delay="0.3s">We are the most popular Logistics and Transportation company.</h4>
+                        <p class="fadeInUp" data-wow-delay="0.4s">We Coordinate the movement of supplies and materials is now a globalized process. Today, the business sector uses logistics as a term to describe the efficient flow and storage of goods from point of origin to the point of consumption.</p>
+                        <div class="list-wrap align-items-center">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">Custom & new Solutions</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">24/7 Support services</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">Dedicated Team </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">Latest Technologies</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">The best Quality Ever</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="side-feature-list-item">
+                                        <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
+                                        <div class="foot-c-info">unlimited opportunities</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <a class="btn-paint mt-30 fadeInUp" data-wow-delay="0.6s" href="{% url 'about' %}">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ##### About Us Area End ##### -->
+
+    <!-- ##### Our Services Area Start ##### -->
+    <section class="our_services_area section-padding-100-0 relative map-bg map-before">
+        <div class="container">
+            
+            <div class="section-heading text-center">
+                
+                <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <span class="">Our Services</span>
+                </div>
+                <h2 class="d-blue bold fadeInUp" data-wow-delay="0.3s">What we speciaized in</h2>
+                <p class=" fadeInUp" data-wow-delay="0.4s"></p>
+            </div>
+                
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.2s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/1.jpg' %}" alt="">
+                        </div>
+                        <h6>Supply Chain Management</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.3s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/2.jpg' %}" alt="">
+                        </div>
+                        <h6>Warehousing Management</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.4s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/3.jpg' %}" alt="">
+                        </div>
+                        <h6>AirLine Transportation</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.5s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/4.jpg' %}" alt="">
+                        </div>
+                        <h6>Ocean Freight Forwarding</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.6s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/5.jpg' %}" alt="">
+                        </div>
+                        <h6> Customs House Brokerage</h6>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.7s">
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{% static 'co/img/services/6.jpg' %}" alt="">
+                        </div>
+                        <h6>Realway Transportation</h6>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+
+
+    <div class="clearfix"></div>
+
+
+    
+    
+  
+    
+
+    <br><br>
+{% if user.is_authenticated %}
+                    <div style="font-size: large;margin-left: 40px;margin-right: 40px;" class="search-widget-area mb-50 wow fadeInUp" data-wow-delay="0.2s" >      
+                        <form  method="get" action="{% url 'search' %}">
+                            <input type="search" name="q" value="{{ request.GET.q }}" id="search" style="background-color: rgb(75, 75, 185);color: white;border-color: red;font-size: larger;" placeholder="Track...">
+                            <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    {% endif %}
+{% endblock %}
