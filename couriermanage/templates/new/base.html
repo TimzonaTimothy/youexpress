@@ -31,15 +31,23 @@
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <div class="preloader"></div>
+    <!-- <div class="preloader"></div> -->
 
 	
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #242424;color: white;font-weight: normal;font-size: medium;font-family: Roboto;">
 		<div class="container">
 			<a class="navbar-brand" href="{% url 'home' %}"><img  src="{% static 'new/logo.png' %}" alt="" title="" width="129px" height="90px" ></a>
-		<button  class="navbar-toggler" style="background-color:#242424 ;border-color: #242424;" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<!-- <button  class="navbar-toggler" style="background:none ;border: none;" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 		  <span style="color: white;" class="navbar-toggler-icon"><i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i></span>
-		</button>
+		</button> -->
+		<button class="btn btn-secondary" style="background-color: #242424;border: none;" type="button" data-toggle="collapse" 
+		data-target="#navbarText" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span>
+        <i class="fas fa-bars"></i>
+    </span>
+</button>
+
 		<div class="collapse navbar-collapse" id="navbarText">
 		  <ul class="navbar-nav mr-auto">
 			
