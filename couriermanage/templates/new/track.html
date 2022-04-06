@@ -24,13 +24,16 @@
 
 
 <div  class="search-widget-area mb-50 wow fadeInUp container" data-wow-delay="0.2s" >      
-    <form class="form-group" method="get" action="{% url 'search' %}">
-        <fieldset>
-            <input type="search" class="form-control" name="q" value="{{ request.GET.q }}" id="search" style="background-color: white;color: black;font-size: larger;" placeholder="Enter Tracking No..." required>
-            <br>
-        <button type="submit" style="background-color: #1AA7EC;color: white;" class="btn btn-success form-control">Track</button>
-        </fieldset>
-        
+    <form  action="{% url 'search' %}" class="search" method="GET">
+        <div class="input-group w-100">
+            <input type="text" class="form-control" name="q" value="{{ request.GET.q }}" placeholder="Enter tracking number" required>
+            
+            
+              <button class="theme-btn btn-style-one" type="submit">
+                <span class="txt">Track</span>
+              </button>
+            
+        </div>
     </form>
 </div>
         <br><br>

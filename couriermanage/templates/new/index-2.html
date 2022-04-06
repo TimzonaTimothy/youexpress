@@ -31,7 +31,12 @@
 	  <span class="sr-only">Next</span>
 	</a>
   </div> -->
-    
+    <style>
+		.txt:hover{
+			color: #228dcb;
+		}
+	</style>
+
 	<section class="main-slider style-two" >
 		<div class="slider-box">
 		
@@ -115,33 +120,35 @@
 	<section>
 
 
-		<div class="">
-			<div style="padding: 30px 10px 0px 10px;margin: 0px 25px 25px 0px;text-align: left;position: relative;font-family: Roboto;">
-				<h2 style="font-size: large;font-weight: bold;">Global Package Tracking</h2>
-			<p>Track packages from China, US Post, Canada Post, <br> Royal Mail, Deutsche Post, Vova, Aliexpress, UPS, Shein, FedEx, Pitney Bowes, eBay, Amazon
-				App store badge Google play badge
-				Hero ios android
-				</p>
-			</div>
-			
-			<form  action="{% url 'search' %}" class="search container" method="GET">
-			<div class="input-group w-100">
-				<input type="text" class="form-control" style="width:80%;" name="q" value="{{ request.GET.q }}" placeholder="Enter tracking number" required>
-				
-				<div class="input-group-append">
-				  <button class="btn btn-primary" type="submit">
-					<i class="fa fa-search"></i>
-				  </button>
-				</div>
-			</div>
-		</form>
-		</div>
+		
 	</section>
 	
 	
 	<!-- about Section -->
 	<section class="interior-section">
+		
 		<div class="auto-container">
+			<div class="">
+				<div style="text-align: left;position: relative;font-family: Roboto;">
+					<h2 style="font-size: large;font-weight: bold;">Global Package Tracking</h2>
+				<p>Track packages from China, US Post, Canada Post, <br> Royal Mail, Deutsche Post, Vova, Aliexpress, UPS, Shein, FedEx, Pitney Bowes, eBay, Amazon
+					App store badge Google play badge
+					Hero ios android
+					</p>
+				</div>
+				
+				<form  action="{% url 'search' %}" class="search" method="GET">
+				<div class="input-group w-100">
+					<input type="text" class="form-control" name="q" value="{{ request.GET.q }}" placeholder="Enter tracking number" required>
+					
+					
+					  <button class="theme-btn btn-style-one" type="submit">
+						<span class="txt">Track</span>
+					  </button>
+					
+				</div>
+			</form>
+			</div> <br>
 			<div class="inner-container">
 				<div class="row clearfix">
 					
@@ -280,7 +287,7 @@
 			
 			<!-- Button Box -->
 			<div class="btn-box text-center">
-				<a href="{% url 'services' %}" style="background-color: #1AA7EC;color: white;font-family: Roboto;" class="theme-btn btn-style-three"><span class="txt">View all Services</span></a>
+				<a href="{% url 'services' %}" class="theme-btn btn-style-one"><span class="txt">View all Services</span></a>
 			</div>
 			
 		</div>
@@ -308,7 +315,7 @@
 							<div class="feature-number" style="color: white;">01</div>
 						</div>
 						<div class="lower-content">
-							<h3 style="color: white;"><a >Materials handling</a></h3>
+							<h4 style="color: white;"><a >Materials handling</a></h4>
 							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
 						</div>
 					</div>
@@ -324,7 +331,7 @@
 							<div class="feature-number" style="color: white;">02</div>
 						</div>
 						<div class="lower-content">
-							<h3 style="color: white;"><a >Packaging & unitisation</a></h3>
+							<h4 style="color: white;"><a >Packaging & unitisation</a></h4>
 							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
 						</div>
 					</div>
@@ -340,7 +347,7 @@
 							<div class="feature-number" style="color: white;">03</div>
 						</div>
 						<div class="lower-content">
-							<h3 style="color: white;"><a >Inventory</a></h3>
+							<h4 style="color: white;"><a >Inventory</a></h4>
 							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
 						</div>
 					</div>
@@ -356,7 +363,7 @@
 							<div class="feature-number" style="color: white;">04</div>
 						</div>
 						<div class="lower-content">
-							<h3 style="color: white;"><a >Transport</a></h3>
+							<h4 style="color: white;"><a >Transport</a></h4>
 							<!-- <div class="text">Our manpower is a fair blend of experience, knowledge to imagination. They have impeccable skill-sets to project management ability.</div> -->
 						</div>
 					</div>
