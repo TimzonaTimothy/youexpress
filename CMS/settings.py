@@ -152,3 +152,9 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+if os.getcwd() == '/app':
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
+    SECURE_SSL_REDIRECT = True
+    DEBUG = False
