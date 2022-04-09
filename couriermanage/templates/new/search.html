@@ -8,13 +8,13 @@
 <section style=";align-items: center;" class="blog-area section-padding-100-0">
       
     <div class="container" style="align-items: center;justify-content: center;text-align: center;">
-        <div  class="row">{% for courier in page_obj %}
+        <div  class="">{% for courier in page_obj %}
             <!-- Single Blog Post -->
-            <div  class="col-12 col-sm-6">
+            <div  class="">
                 <div class="single-blog-area wow fadeInUp" data-wow-delay="0.2s">
                     <!-- Post Thumbnail -->
                     <div class="blog_thumbnail">
-                        <img src="{% static 'co/img/blog-img/2.jpg' %}" alt="">
+                        <img src="{% static 'new/2.jpg' %}" alt="">
                     </div>
                     <!-- Post Content -->
                     <div class="blog-content">
@@ -24,7 +24,7 @@
                         </div>
                         
                         <p>Date {{ courier.list_date }}</p>
-                        <a href="{% url 'detail' id=courier.id %}" class="btn btn-success">Read Details</a>
+                        <a href="{% url 'detail' id=courier.id %}" class="theme-btn btn-style-one">Read Details</a>
                     </div>
                 </div>
             </div>
