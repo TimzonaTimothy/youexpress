@@ -25,7 +25,7 @@ SECRET_KEY = '$5a%%cj78_@&x045mb1bqe1el%$&5bnxd%qi=w*=xqb*txl2u-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['youexpres.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['youexpres.herokuapp.com', '127.0.0.1','youexpress.us','www.youexpress.us']
 
 
 # Application definition
